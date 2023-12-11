@@ -9,24 +9,24 @@ export default function WaveView() {
     const text =
         "A multi-socket tool for translating your digital projects easily and seamlessly";
 
-    // const words = text.split(" ").map((word, index) => {
-    //     const wordDelay = 0.15 * index;
-    //     const letters = word.split("").map((char, charIndex) => (
-    //         <span
-    //             key={charIndex}
-    //             className="letter"
-    //             style={{ animationDelay: `${wordDelay + 0.02 * charIndex}s` }}
-    //         >
-    //             {char}
-    //         </span>
-    //     ));
+    const words = text.split(" ").map((word, index) => {
+        const wordDelay = 0.15 * index;
+        const letters = word.split("").map((char, charIndex) => (
+            <span
+                key={charIndex}
+                className="letter"
+                style={{ animationDelay: `${wordDelay + 0.02 * charIndex}s` }}
+            >
+                {char}
+            </span>
+        ));
 
-    //     return (
-    //         <span key={index} style={{ display: "inline-block" }}>
-    //             {letters}
-    //         </span>
-    //     );
-    // });
+        return (
+            <span key={index} style={{ display: "inline-block" }}>
+                {letters}
+            </span>
+        );
+    });
 
     return (
         <div className="LandingWave">
@@ -40,9 +40,9 @@ export default function WaveView() {
                         </span>
                     </h1>
                     <p>
-                        {/* {words.map((word, index) => (
+                        {words.map((word, index) => (
                             <React.Fragment key={index}>{word} </React.Fragment>
-                        ))} */}
+                        ))}
                     </p>
                     <button type="button" className="button">
                         <span className="apparitionSpan">
