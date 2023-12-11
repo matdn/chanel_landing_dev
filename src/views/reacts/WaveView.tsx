@@ -1,6 +1,5 @@
 import React, { useCallback } from "react";
 import { MainThree } from "../../MainThree";
-import { TextureLoader } from "three";
 
 export default function WaveView() {
     const threeRef = useCallback((node: HTMLDivElement) => {
@@ -32,8 +31,9 @@ export default function WaveView() {
         <div className="LandingWave">
             <div className="three" ref={threeRef}></div>
             <div className="textAnimation">
-                {/* <img src="./medias/img/logoChanel.png" alt="" /> */}
+               
                 <div>
+                    <img src="./medias/img/logo.svg" alt="" />
                     <h1>
                         <span>
                             <span>My translation companion</span>
