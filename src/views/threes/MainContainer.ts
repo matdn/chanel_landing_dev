@@ -1,6 +1,6 @@
 import { Object3DBase } from "./bases/Object3DBase";
 import Wave from "./components/Wave";
-import StarsContainer from "./components/stars/StarsContainer";
+// import StarsContainer from "./components/stars/StarsContainer";
 
 
 export default class MainContainer extends Object3DBase {
@@ -8,7 +8,7 @@ export default class MainContainer extends Object3DBase {
         super();
         const wave = new Wave();
         this.add(wave);
-        const starsContainer = new StarsContainer();
+        // const starsContainer = new StarsContainer();
         // this.add(starsContainer);
     }
 }
