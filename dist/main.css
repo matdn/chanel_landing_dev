@@ -17,36 +17,35 @@
     src: url("./medias/fonts/ABChanelCorpo2022-SemiBold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal
-}
-body, html {
+}body, html {
     margin: 0px;
     width: 100%;
     height: 100%;
     background-color: black;
     color: white;
     overflow: hidden;
-}
-.react {
+  }
+  .react {
     width: 100%;
     height: 100%;
     overflow: hidden;
     pointer-events: all;
-}
-.LandingWave {
+  }
+  .LandingWave {
     height: 100%;
-}
-.LandingWave p, .LandingWave h1, .LandingWave h2, .LandingWave h3, .LandingWave h4 {
+  }
+  .LandingWave p, .LandingWave h1, .LandingWave h2, .LandingWave h3, .LandingWave h4 {
     margin: 0;
     padding: 0;
     font-size: 1em;
-}
-.LandingWave .three {
+  }
+  .LandingWave .three {
     width: 100%;
     height: 100%;
     overflow: hidden;
     pointer-events: all;
-}
-.textAnimation {
+  }
+  .textAnimation {
     position: fixed;
     top: 0;
     left: 0;
@@ -58,16 +57,16 @@ body, html {
     justify-content: center;
     align-items: center;
     padding: 0 0 0 10vw;
-}
-.textAnimation img {
+  }
+  .textAnimation img {
     position: absolute;
     height: 60px;
     width: 60px;
     right: 0;
     top: 40px;
     transform: translate(50%, 50%);
-}
-.textAnimation div h1 {
+  }
+  .textAnimation div h1 {
     color: #f3c983;
     font-size: 1.8em;
     font-weight: 800;
@@ -76,31 +75,31 @@ body, html {
     text-transform: uppercase;
     animation-delay: 1s;
     margin: 0;
-}
-.textAnimation div h1 > span {
+  }
+  .textAnimation div h1 > span {
     overflow: hidden;
     display: inline-block;
     animation-delay: 1s;
-}
-.textAnimation div h1 > span > span {
+  }
+  .textAnimation div h1 > span > span {
     transform: translateY(100%);
     display: inline-block;
     animation: spanFadeIn 1s forwards;
     animation-delay: 2.5s;
-}
-.textAnimation div p {
+  }
+  .textAnimation div p {
     font-family: "abchanel_pb";
     font-size: 3.375em;
     font-weight: 100;
     padding: 30px 0 60px;
     -webkit-text-stroke: 2px black;
-}
-.textAnimation .letter {
+  }
+  .textAnimation .letter {
     display: inline-block;
     opacity: 0;
     animation: fadeInUp 0.5s forwards;
-}
-.textAnimation button {
+  }
+  .textAnimation button {
     background: none;
     background-color: black;
     color: #f3c983;
@@ -114,129 +113,130 @@ body, html {
     padding: 10px 20px;
     transition: all 500ms;
     position: relative;
-}
-.textAnimation button .apparitionSpan {
+  }
+  .textAnimation button .apparitionSpan {
     display: flex;
     align-items: center;
-}
-.textAnimation button .apparitionSpan > span {
+  }
+  .textAnimation button .apparitionSpan > span {
     overflow: hidden;
     display: inline-block;
     animation-delay: 1s;
-}
-.textAnimation button .apparitionSpan > span > span {
+  }
+  .textAnimation button .apparitionSpan > span > span {
     transform: translateY(100%);
     display: inline-block;
     animation: spanFadeIn 1s forwards;
     animation-delay: 2s;
-}
-.textAnimation button .apparitionSpan .hoverSpan {
+  }
+  .textAnimation button .apparitionSpan .hoverSpan {
     position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
-}
-.textAnimation button .apparitionSpan .hoverSpan:after {
+  }
+  .textAnimation button .apparitionSpan .hoverSpan:after {
     content: "";
     display: block;
     width: 80px;
     height: 1px;
     background-color: #f3c983;
     transition: all 500ms;
-}
-.textAnimation button .apparitionSpan .hoverSpan:before {
+  }
+  .textAnimation button .apparitionSpan .hoverSpan:before {
     content: "";
     display: block;
     width: 0px;
     height: 1px;
     background-color: #f3c983;
     transition: all 500ms;
-}
-.textAnimation button .linesContainer {
+  }
+  .textAnimation button .linesContainer {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-}
-.textAnimation button .linesContainer span {
+  }
+  .textAnimation button .linesContainer span {
     position: absolute;
     background-color: #f3c983;
-}
-.textAnimation button .linesContainer span:nth-child(1) {
+  }
+  .textAnimation button .linesContainer span:nth-child(1) {
     top: 0;
     left: 0;
     width: 0%;
     height: 2px;
     animation: borderWidthAppear 500ms forwards;
-}
-.textAnimation button .linesContainer span:nth-child(2) {
+  }
+  .textAnimation button .linesContainer span:nth-child(2) {
     top: 0;
     right: 0;
     width: 2px;
     height: 0%;
     animation: borderHeightAppear 500ms forwards;
     animation-delay: 500ms;
-}
-.textAnimation button .linesContainer span:nth-child(3) {
+  }
+  .textAnimation button .linesContainer span:nth-child(3) {
     bottom: 0;
     right: 0;
     width: 0%;
     height: 2px;
     animation: borderWidthAppear 500ms forwards;
     animation-delay: 1000ms;
-}
-.textAnimation button .linesContainer span:nth-child(4) {
+  }
+  .textAnimation button .linesContainer span:nth-child(4) {
     bottom: 0;
     left: 0;
     width: 2px;
     height: 0%;
     animation: borderHeightAppear 500ms forwards;
     animation-delay: 1500ms;
-}
-.textAnimation button:hover {
+  }
+  .textAnimation button:hover {
     background-color: #f3c983;
     color: black;
-}
-.textAnimation button:hover .hoverSpan:after {
+  }
+  .textAnimation button:hover .hoverSpan:after {
     width: 10px;
     background-color: black;
-}
-.textAnimation button:hover .hoverSpan:before {
+  }
+  .textAnimation button:hover .hoverSpan:before {
     width: 70px;
     background-color: black;
-}
-@keyframes fadeInUp {
+  }
+  @keyframes fadeInUp {
     from {
-        opacity: 0;
-        transform: translateY(20px);
-   }
+      opacity: 0;
+      transform: translateY(20px);
+    }
     to {
-        opacity: 1;
-        transform: translateY(0);
-   }
-}
-@keyframes spanFadeIn {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes spanFadeIn {
     0% {
-        transform: translateY(100%);
-   }
+      transform: translateY(100%);
+    }
     100% {
-        transform: translateY(0%);
-   }
-}
-@keyframes borderWidthAppear {
+      transform: translateY(0%);
+    }
+  }
+  @keyframes borderWidthAppear {
     0% {
-        width: 0%;
-   }
+      width: 0%;
+    }
     100% {
-        width: 100%;
-   }
-}
-@keyframes borderHeightAppear {
+      width: 100%;
+    }
+  }
+  @keyframes borderHeightAppear {
     0% {
-        height: 0%;
-   }
+      height: 0%;
+    }
     100% {
-        height: 100%;
-   }
-}
+      height: 100%;
+    }
+  }
+  
