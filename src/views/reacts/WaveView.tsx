@@ -31,9 +31,8 @@ export default function WaveView() {
         <div className="LandingWave">
             <div className="three" ref={threeRef}></div>
             <div className="textAnimation">
-               
                 <div>
-                    <img src="./medias/img/logo.svg" alt="" />
+                    <img src="./medias/img/logo.png" alt="" />
                     <h1>
                         <span>
                             <span>My translation companion</span>
