@@ -245,5 +245,5 @@ canvas{
 }
 
 .three canvas{
-    display: block;
+    display: block !important;
 }
