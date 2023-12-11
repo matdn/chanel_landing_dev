@@ -50,7 +50,7 @@ export default function WaveView() {
                                 <span className="hoverSpan">Access</span>
                             </span>
                         </span>
-                        <span>
+                        <span className="linesContainer">
                             <span></span>
                             <span></span>
                             <span></span>

@@ -82,7 +82,7 @@ html {
             font-size: 2.1em;
             font-weight: 100;
             padding: 30px 0 60px;
-            -webkit-text-stroke: 1px black;
+            -webkit-text-stroke: 0px black;
         }
     }
     .letter {
@@ -94,7 +94,6 @@ html {
         background: none;
         background-color: black;
         color: #f3c983;
-        border: 2px solid #f3c983;
         font-family: abchanel_pb, Arial, Helvetica, sans-serif;
         font-size: 1.8em;
         cursor: pointer;
