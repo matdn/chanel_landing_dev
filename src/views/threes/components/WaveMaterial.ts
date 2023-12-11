@@ -90,7 +90,7 @@ export default class WaveMaterial extends ShaderMaterial {
                 // float r2 = .5 * fp.z;
                 float cc = (cos(time)+1.)*0.5;
                 // float r2 = (0.08+cc*0.08) * fp.z;
-                float r2 = random * 0.12 * fp.z;
+                float r2 = random * 0.08 * fp.z;
                 fp.x += r2 * cos(a) ;
                 fp.y +=  r2 * sin(a) * ratio;
                 // fp.z=1.;
@@ -131,22 +131,22 @@ export default class WaveMaterial extends ShaderMaterial {
 
                 float distance = length(uv - center);
 
-                float haloRadius = 0.4; 
+                float haloRadius = .1; 
                 float edgeSoftness = 1.; 
                 float haloIntensity = smoothstep(haloRadius, haloRadius - edgeSoftness, distance);
 
                 vec4 color = texture2D(spriteTexture, finalUV);
 
-                vec3 yellow = vec3(1, .7, 0.1); 
+                vec3 yellow = vec3(1, .7, 0.2); 
                 vec3 white = vec3(1., .8, .2);   
                 color.rgb = mix(yellow, white, step(.6, vRandom)); 
 
                 color.rgb *= mix(1.0, 0.5, haloIntensity);
                 color.a *= 1.0 - haloIntensity;
                 color.a *= pow(vRandom, 1.2);
-                color.rgb *= 0.18 * (vWP.x * 0.2 + 0.8);
+                color.rgb *= 0.18 * (vWP.x * 0.3 + 0.8);
                 float a = 1. - intro;
-                a=pow(a, 3.);
+                a=pow(a, 2.);
                 color.a *= a;
                 
                 gl_FragColor = color;
