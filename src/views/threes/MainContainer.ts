@@ -9,6 +9,6 @@ export default class MainContainer extends Object3DBase {
         const wave = new Wave();
         this.add(wave);
         const starsContainer = new StarsContainer();
-        this.add(starsContainer);
+        // this.add(starsContainer);
     }
 }

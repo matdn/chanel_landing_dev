@@ -37,7 +37,7 @@ export default class StarsContainer extends Object3DBase {
             const position = new Vector3(Math.random() * 20 - 1, Math.random() * 20 - 5, 0);
             const textureIndex = Math.floor(Math.random() * this._textures.length);
             const star = new Star(i, position, textureIndex);
-            this._starsList.push(star);
+            // this._starsList.push(star);
         }
 
         this.add(this._particles);
