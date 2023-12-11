@@ -241,7 +241,7 @@
   }
 
 canvas{
-    display: none;
+    display: none !important;
 }
 
 .three canvas{
