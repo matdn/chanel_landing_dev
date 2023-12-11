@@ -65,17 +65,14 @@ html {
             font-family: $font;
             display: inline-block;
             text-transform: uppercase;
-            animation-delay: 0s;
             margin: 0;
             > span {
                 overflow: hidden;
                 display: inline-block;
-                animation-delay: 1s;
                 > span {
                     transform: translateY(100%);
                     display: inline-block;
                     animation: spanFadeIn 1s forwards;
-                    animation-delay: 2.5s;
                 }
             }
         }
