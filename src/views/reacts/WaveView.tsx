@@ -21,9 +21,9 @@ export default function WaveView() {
         ));
 
         return (
-            <span key={index} style={{ display: "inline-block" }}>
-                {letters}
-            </span>
+            <span style={{ animationDelay:"all 2s"}}> <span key={index} style={{ display: "inline-block" }}>
+            {letters}
+        </span></span>
         );
     });
 
