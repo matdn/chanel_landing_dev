@@ -4,7 +4,7 @@ import '../scss/css.scss';
 import { MainReact } from "./MainReactView";
 import { MainThree } from "./MainThree";
 import { CamerasManager } from "./managers/CamerasManager";
-import Stats from 'stats.js';
+// import Stats from 'stats.js';
 import { InitCommands } from "./inits/InitCommands";
 
 export class App {
