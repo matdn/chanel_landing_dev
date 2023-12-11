@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "target": "ESNext",
+        "module": "ESNext",
+        "strict": true,
+        "allowSyntheticDefaultImports": true,
+        "strictPropertyInitialization": false,
+        "sourceMap": true,
+        "types": [
+            "node"
+        ],
+        "jsx": "react",
+        // "allowImportingTsExtensions": true,
+        // "resolveJsonModule": true,
+        // "isolatedModules": true,
+        // "noEmit": true,
+    },
+    "include": [
+        "./src/**/*.*", "libs/cooker/_src/components/Sound.ts",
+    ]
+}

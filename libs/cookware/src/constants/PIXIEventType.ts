@@ -1,0 +1,22 @@
+export enum PixiEventType {
+    CLICK = 'click',
+    POINTER_DOWN = 'pointerdown',
+    POINTER_UP = 'pointerup',
+    POINTER_MOVE = 'pointermove',
+    MOUSE_OVER = 'mouseover',
+    MOUSE_OUT = 'mouseout',
+    RIGHT_CLICK = 'rightclick',
+    TOUCH_START = 'touchstart',
+    TOUCH_END = 'touchend',
+    TOUCH_MOVE = 'touchmove',
+    TOUCH_CANCEL = 'touchcancel',
+    MOUSE_DOWN = 'mousedown',
+    MOUSE_UP = 'mouseup',
+    MOUSE_MOVE = 'mousemove',
+    CONTEXT_MENU = 'contextmenu',
+    WHEEL = 'wheel',
+    DRAG_START = 'dragstart',
+    DRAG_END = 'dragend',
+    DRAG_MOVE = 'dragmove',
+}
+
