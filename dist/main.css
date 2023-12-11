@@ -239,4 +239,11 @@
       height: 100%;
     }
   }
-  
+
+canvas{
+    display: none;
+}
+
+.three canvas{
+    display: block;
+}
