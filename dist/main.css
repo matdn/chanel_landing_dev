@@ -103,7 +103,7 @@
     background: none;
     background-color: black;
     color: #f3c983;
-    border: none;
+    border: solid 2px #f3c983;
     font-family: abchanel_pb, Arial, Helvetica, sans-serif;
     font-size: 1.8em;
     cursor: pointer;
@@ -135,7 +135,7 @@
     align-items: center;
     gap: 10px;
   }
-  .textAnimation button .apparitionSpan .hoverSpan:after {
+  .textAnimation button .apparitionSpan :after {
     content: "";
     display: block;
     width: 80px;
