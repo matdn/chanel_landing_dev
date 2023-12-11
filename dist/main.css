@@ -135,7 +135,7 @@
     align-items: center;
     gap: 10px;
   }
-  .textAnimation button .apparitionSpan :after {
+  .textAnimation button .apparitionSpan .hoverSpan:after {
     content: "";
     display: block;
     width: 80px;

@@ -45,11 +45,11 @@ export default function WaveView() {
                         ))}
                     </p>
                     <button type="button" className="button">
-                        <span className="apparitionSpan">
-                            <span>
+                        <div className="apparitionSpan">
+                            <div>
                                 <span className="hoverSpan">Access</span>
-                            </span>
-                        </span>
+                            </div>
+                        </div>
                         <span className="linesContainer">
                             <span></span>
                             <span></span>
