@@ -130,13 +130,13 @@ body, html {
     animation: spanFadeIn 1s forwards;
     animation-delay: 2s;
   }
-  .textAnimation button .apparitionSpan .hoverSpan {
+  .hoverSpan {
     position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
   }
-  .textAnimation button .apparitionSpan .hoverSpan:after {
+   .hoverSpan::after {
     content: "";
     display: block;
     width: 80px;
@@ -144,7 +144,7 @@ body, html {
     background-color: #f3c983;
     transition: all 500ms;
   }
-  .textAnimation button .apparitionSpan .hoverSpan:before {
+  .hoverSpan::before {
     content: "";
     display: block;
     width: 0px;
@@ -163,14 +163,14 @@ body, html {
     position: absolute;
     background-color: #f3c983;
   }
-  .textAnimation button .linesContainer span:nth-child(1) {
+  .textAnimation button .linesContainer span::nth-child(1) {
     top: 0;
     left: 0;
     width: 0%;
     height: 2px;
     animation: borderWidthAppear 500ms forwards;
   }
-  .textAnimation button .linesContainer span:nth-child(2) {
+  .textAnimation button .linesContainer span::nth-child(2) {
     top: 0;
     right: 0;
     width: 2px;
@@ -198,11 +198,11 @@ body, html {
     background-color: #f3c983;
     color: black;
   }
-  .textAnimation button:hover .hoverSpan:after {
+  .textAnimation button:hover .hoverSpan::after {
     width: 10px;
     background-color: black;
   }
-  .textAnimation button:hover .hoverSpan:before {
+  .textAnimation button:hover .hoverSpan::before {
     width: 70px;
     background-color: black;
   }
