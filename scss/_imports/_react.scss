@@ -90,7 +90,8 @@ html {
     .letter {
         display: inline-block;
         opacity: 0;
-        animation: fadeInUp 0s forwards;
+        animation: fadeInUp 0.5s forwards;
+        animation-delay: 1s;
     }
     button {
         background: none;
