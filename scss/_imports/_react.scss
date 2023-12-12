@@ -61,6 +61,7 @@ html {
             color: #f3c983;
             font-size: 3.375em;
             font-weight: 800;
+            line-height: 60px;
             font-family: $font;
             display: inline-block;
             text-transform: uppercase;
@@ -209,7 +210,7 @@ html {
     pointer-events: none;
     opacity: 1;
     transition: opacity 400ms ease-out; /* Plus rapide que précédemment */
-    animation: fadeOut 500ms forwards;
+    animation: fadeOut 700ms forwards;
 }
 
 .mouse-square:hover {

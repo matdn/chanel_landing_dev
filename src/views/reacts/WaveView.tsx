@@ -6,22 +6,22 @@ export default function WaveView() {
         const handleMouseMove = (event: MouseEvent) => {
             for (let i = 0; i < 1; i++) { // Génère 5 cubes à chaque mouvement
                 const square = document.createElement("div");
-                const size = Math.random() * 0.5 +1.5; 
-                const offsetX = (Math.random() - 0.5) * 20; // Position X aléatoire autour de la souris
-                const offsetY = (Math.random() - 0.5) * 20; // Position Y aléatoire autour de la souris
+                const size = Math.random() * 0.5 +1; 
+                const offsetX = (Math.random() - 0.5) * 8; // Position X aléatoire autour de la souris
+                const offsetY = (Math.random() - 0.5) * 8; // Position Y aléatoire autour de la souris
                 const opacity = Math.random(); // Opacité aléatoire entre 0 et 1
 
                 square.style.left = `${event.pageX + offsetX}px`;
                 square.style.top = `${event.pageY + offsetY}px`;
                 square.style.width = `${size}px`;
                 square.style.height = `${size}px`;
-                square.style.opacity = `opacity`;
+                square.style.opacity = `${opacity}`;
                 square.classList.add("mouse-square");
                 document.body.appendChild(square);
 
                 setTimeout(() => {
                     square.remove();
-                }, 500); // Durée de vie plus courte
+                }, 900); // Durée de vie plus courte
             }
         };
 
