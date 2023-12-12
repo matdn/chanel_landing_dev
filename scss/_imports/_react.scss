@@ -200,6 +200,20 @@ html {
     }
 }
 
+.mouse-square {
+    box-shadow: 0 0 10px 1px #f6b545; /* Ombre floue jaune */
+    // filter: blur(1px); 
+    position: absolute;
+    background-color: #f6b545; /* Vous pouvez varier cette couleur */
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 400ms ease-out; /* Plus rapide que précédemment */
+}
+
+.mouse-square:hover {
+    opacity: 0;
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
