@@ -70,9 +70,8 @@ export default function WaveView() {
         <div className="LandingWave">
             <img src="./medias/img/LogoTransition.svg" className={`transitionLogo ${isClassAdded ? "transitionActiveImg" : ""}`} />
             <div className={`pointTransition  ${isClassAdded ? "transitionActiveCircle" : ""}`} />
-            <div className="three" ref={threeRef}></div>
-            <div className="textAnimation">
-                
+            <div className={`three  ${isClassAdded ? "opacityTransition" : ""}`}  ref={threeRef}></div>
+            <div className={`textAnimation  ${isClassAdded ? "opacityTransition" : ""}`}>
                     <img src="./medias/img/Logo.svg" alt="" />
                     <div> 
                         <h1>

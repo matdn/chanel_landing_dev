@@ -225,13 +225,14 @@ html {
     }
 }
 
-// .transitionActiveImg{
-//     width: 100rem !important;
-//     transition: 1s;
-// }
+.transitionActiveImg{
+    width: 70vh !important;
+    transition: 1s;
+}
 
 .transitionActiveCircle{
     animation: pointAnimation 1000ms ease-in-out forwards;
+    animation-delay: 350ms;
 }
 
 .mouse-square {
@@ -249,6 +250,18 @@ html {
     opacity: 0;
 }
 
+.opacityTransition{
+    animation: opacityTransition 250ms forwards;
+}
+
+@keyframes opacityTransition{
+    0%{
+        opacity: 1;
+    }
+    100%{   
+        opacity: 0;
+    }
+}
 
 @keyframes fadeOut{
     0%{
