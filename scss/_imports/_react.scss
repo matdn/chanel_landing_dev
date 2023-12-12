@@ -54,7 +54,7 @@ html {
         left: 10vw;
         top: 4rem;
         opacity: 0;
-        animation: logoAnim 1500ms forwards ease-in-out;
+        animation: logoAnim 1000ms forwards ease-in-out;
     }
     div {
         h1 {
@@ -72,6 +72,7 @@ html {
                     transform: translateY(100%);
                     display: inline-block;
                     animation: spanFadeIn 1s forwards;
+                    // animation-delay: 500ms;
                 }
             }
         }
@@ -80,6 +81,7 @@ html {
             font-size: 2.1em;
             font-weight: 100;
             padding: 30px 0 60px;
+            animation-delay: 2s;
         }
     }
     .letter {
@@ -205,7 +207,7 @@ html {
     position: absolute;
     background-color: #ffffff; /* Vous pouvez varier cette couleur */
     pointer-events: none;
-    opacity: 0.8;
+    opacity: 1;
     transition: opacity 400ms ease-out; /* Plus rapide que précédemment */
     animation: fadeOut 500ms forwards;
 }

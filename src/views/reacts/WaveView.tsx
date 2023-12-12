@@ -30,6 +30,8 @@ export default function WaveView() {
         return () => {
             document.removeEventListener("mousemove", handleMouseMove);
         };
+
+        
     }, []);
 
 
@@ -50,7 +52,9 @@ export default function WaveView() {
                 {char}
             </span>
         ));
-
+        setTimeout(()=>{
+            
+        })
         return (
             <span key={index} style={{ display: "inline-block" }}>
             {letters}
