@@ -55,7 +55,6 @@ html {
         top: 4rem;
         opacity: 0;
         animation: logoAnim 1500ms forwards ease-in-out;
-        animation-delay: 2s;
     }
     div {
         h1 {
@@ -201,17 +200,27 @@ html {
 }
 
 .mouse-square {
-    box-shadow: 0 0 10px 1px #f6b545; /* Ombre floue jaune */
-    // filter: blur(1px); 
+    box-shadow: 0 0 10px 1px #ffa200; /* Ombre floue jaune */
+    filter: blur(1px); 
     position: absolute;
-    background-color: #f6b545; /* Vous pouvez varier cette couleur */
+    background-color: #ffffff; /* Vous pouvez varier cette couleur */
     pointer-events: none;
-    opacity: 1;
+    opacity: 0.8;
     transition: opacity 400ms ease-out; /* Plus rapide que précédemment */
+    animation: fadeOut 500ms forwards;
 }
 
 .mouse-square:hover {
     opacity: 0;
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 
 @keyframes fadeInUp {

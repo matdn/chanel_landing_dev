@@ -4,9 +4,9 @@ import { MainThree } from "../../MainThree";
 export default function WaveView() {
     useEffect(() => {
         const handleMouseMove = (event: MouseEvent) => {
-            for (let i = 0; i < 10; i++) { // Génère 5 cubes à chaque mouvement
+            for (let i = 0; i < 1; i++) { // Génère 5 cubes à chaque mouvement
                 const square = document.createElement("div");
-                const size = Math.random() * 1 + 2; // Taille aléatoire entre 5 et 10px
+                const size = Math.random() * 0.5 +1.5; 
                 const offsetX = (Math.random() - 0.5) * 20; // Position X aléatoire autour de la souris
                 const offsetY = (Math.random() - 0.5) * 20; // Position Y aléatoire autour de la souris
                 const opacity = Math.random(); // Opacité aléatoire entre 0 et 1
@@ -15,13 +15,13 @@ export default function WaveView() {
                 square.style.top = `${event.pageY + offsetY}px`;
                 square.style.width = `${size}px`;
                 square.style.height = `${size}px`;
-                square.style.opacity = `0.5`;
+                square.style.opacity = `opacity`;
                 square.classList.add("mouse-square");
                 document.body.appendChild(square);
 
                 setTimeout(() => {
                     square.remove();
-                }, 100); // Durée de vie plus courte
+                }, 500); // Durée de vie plus courte
             }
         };
 
