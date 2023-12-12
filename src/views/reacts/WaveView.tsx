@@ -1,7 +1,8 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { MainThree } from "../../MainThree";
 
 export default function WaveView() {
+    const [isClassAdded, setIsClassAdded] = useState(false);
     useEffect(() => {
         const handleMouseMove = (event: MouseEvent) => {
             for (let i = 0; i < 1; i++) { // Génère 5 cubes à chaque mouvement
@@ -24,7 +25,7 @@ export default function WaveView() {
                 }, 900); // Durée de vie plus courte
             }
         };
-
+        
         document.addEventListener("mousemove", handleMouseMove);
 
         return () => {
@@ -34,6 +35,9 @@ export default function WaveView() {
         
     }, []);
 
+    const handleClick = () => {
+        setIsClassAdded(true); // Met à jour l'état pour ajouter la classe
+    };
 
     const threeRef = useCallback((node: HTMLDivElement) => {
         MainThree.SetDomElementContainer(node);
@@ -64,34 +68,38 @@ export default function WaveView() {
 
     return (
         <div className="LandingWave">
+            <img src="./medias/img/LogoTransition.svg" className={`transitionLogo ${isClassAdded ? "transitionActiveImg" : ""}`} />
+            <div className={`pointTransition  ${isClassAdded ? "transitionActiveCircle" : ""}`} />
             <div className="three" ref={threeRef}></div>
             <div className="textAnimation">
-                <div>
+                
                     <img src="./medias/img/Logo.svg" alt="" />
-                    <h1>
+                    <div> 
+                        <h1>
                         <span>
                             <span>My translation companion</span>
                         </span>
-                    </h1>
-                    <p>
-                        {words.map((word, index) => (
-                            <React.Fragment key={index}>{word} </React.Fragment>
-                        ))}
-                    </p>
-                    <button type="button" className="button">
-                        <span className="apparitionSpan">
-                            <span>
-                                <span className="hoverSpan">Access</span>
+                        </h1>
+                        <p>
+                            {words.map((word, index) => (
+                                <React.Fragment key={index}>{word} </React.Fragment>
+                            ))}
+                        </p>
+                        <button type="button" className="button" onClick={handleClick}>
+                            <span className="apparitionSpan">
+                                <span>
+                                    <span className="hoverSpan">Access</span>
+                                </span>
                             </span>
-                        </span>
-                        <span className="linesContainer">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </button>
-                </div>
+                            <span className="linesContainer">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </div>
+                
             </div>
         </div>
     );
