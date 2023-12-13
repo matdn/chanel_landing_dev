@@ -30,7 +30,6 @@ export default class EndTransitionCommand {
         this._StartLookAtPosition.copy(ProjectCameraController.LookAtPosition);
         this._EndLookAtPosition.set(5,-50,0);
 
-
         this._Ease.onChange = this._OnChangeEase;
         this._Ease.from(0).to(1, 2000).call(this._OnFinishEase);
     }
