@@ -5,15 +5,16 @@ html {
     margin: 0px;
     width: 100%;
     height: 100%;
-    background-color: black;
     color: white;
     overflow: hidden;
+    
 }
 .react {
     width: 100%;
     height: 100%;
     overflow: hidden;
     pointer-events: all;
+
 }
 
 .LandingWave {
@@ -225,15 +226,20 @@ html {
     }
 }
 
-.transitionActiveImg{
-    width: 70vh !important;
-    transition: 1s;
+.transitionBackground{
+    background-color: #ffffff;
+    transition-delay: 500ms;
 }
 
-.transitionActiveCircle{
-    animation: pointAnimation 1000ms ease-in-out forwards;
-    animation-delay: 350ms;
-}
+// .transitionActiveImg{
+//     animation: pointAnimation 1000ms ease-in-out forwards;
+//     animation-delay: 1050ms;
+// }
+
+// .transitionActiveCircle{
+//     animation: pointAnimation 1000ms ease-in-out forwards;
+//     animation-delay: 1350ms;
+// }
 
 .mouse-square {
     box-shadow: 0 0 10px 1px #ffa200; /* Ombre floue jaune */
@@ -252,6 +258,23 @@ html {
 
 .opacityTransition{
     animation: opacityTransition 250ms forwards;
+}
+
+
+.endTransition{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    transition: opacity 0.9s 1.1s ease;
+    &.activate{
+        opacity: 1;
+    }
 }
 
 @keyframes opacityTransition{

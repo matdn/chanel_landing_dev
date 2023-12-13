@@ -1,5 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { MainThree } from "../../MainThree";
+import { ViewsProxy } from "pancake";
+import EndTransitionCommand from "../../commands/EndTransitionCommand";
 
 export default function WaveView() {
     const [isClassAdded, setIsClassAdded] = useState(false);
@@ -36,7 +38,8 @@ export default function WaveView() {
     }, []);
 
     const handleClick = () => {
-        setIsClassAdded(true); // Met à jour l'état pour ajouter la classe
+        setIsClassAdded(true); 
+        EndTransitionCommand.Start();
     };
 
     const threeRef = useCallback((node: HTMLDivElement) => {
@@ -67,10 +70,11 @@ export default function WaveView() {
     });
 
     return (
-        <div className="LandingWave">
+        <div className={`LandingWave  ${isClassAdded ? "transitionBackground" : ""}`}>
             <img src="./medias/img/LogoTransition.svg" className={`transitionLogo ${isClassAdded ? "transitionActiveImg" : ""}`} />
             <div className={`pointTransition  ${isClassAdded ? "transitionActiveCircle" : ""}`} />
-            <div className={`three  ${isClassAdded ? "opacityTransition" : ""}`}  ref={threeRef}></div>
+            {/* <div className={`three  ${isClassAdded ? "opacityTransition" : ""}`}  ref={threeRef}></div> */}
+            <div className="three" ref={threeRef}></div>
             <div className={`textAnimation  ${isClassAdded ? "opacityTransition" : ""}`}>
                     <img src="./medias/img/Logo.svg" alt="" />
                     <div> 
@@ -100,6 +104,7 @@ export default function WaveView() {
                     </div>
                 
             </div>
+            <div className={`endTransition  ${isClassAdded ? "activate" : ""}`}></div>
         </div>
     );
 }

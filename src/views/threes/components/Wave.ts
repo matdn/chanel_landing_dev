@@ -1,6 +1,6 @@
 import { DomEvent } from "cookware";
 import { Ease, EaseFunction } from "ease";
-import { Float32BufferAttribute, PlaneGeometry, Points } from "three";
+import { DirectionalLight, Float32BufferAttribute, PlaneGeometry, Points } from "three";
 import { ThreeMouseManager } from "../../../managers/ThreeMouseManager";
 import { Object3DBase } from "../bases/Object3DBase";
 import WaveMaterial from "./WaveMaterial";
@@ -99,6 +99,7 @@ export default class Wave extends Object3DBase {
         this._mousePosX = px;
         this._mousePosY = py;
     };
+
 
     private _getMousePosition(e: Event): { x: number; y: number } {
         let x = 0;
